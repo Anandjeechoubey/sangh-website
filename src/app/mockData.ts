@@ -1,0 +1,88 @@
+import { BlogPost } from './types';
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: 'Exploring the Latest Trends in Web Development',
+    description: 'Discover the latest trends and technologies shaping the web development industry in 2024, including new frameworks and advanced frontend features.',
+    author: 'John Doe',
+    date: 'October 1, 2024',
+  },
+  {
+    id: '2',
+    title: 'Understanding TypeScript in Depth',
+    description: 'A comprehensive guide to mastering TypeScript for modern JavaScript development, covering types, interfaces, generics, and more.',
+    author: 'Jane Smith',
+    date: 'September 15, 2024',
+  },
+  {
+    id: '3',
+    title: 'How to Create a Modern Blog Website with Next.js',
+    description: 'Step-by-step guide to creating a modern and responsive blog site using Next.js, TypeScript, and Tailwind CSS.',
+    author: 'Anand K.',
+    date: 'August 25, 2024',
+  },
+  {
+    id: '4',
+    title: 'Building Reusable React Components',
+    description: 'Learn how to design and build reusable React components that can be shared across your applications, reducing development time and code duplication.',
+    author: 'Emily White',
+    date: 'July 19, 2024',
+  },
+  {
+    id: '5',
+    title: 'Optimizing Performance in Large React Applications',
+    description: 'Performance optimization techniques for scaling large React applications, including memoization, lazy loading, and bundle splitting.',
+    author: 'Michael Brown',
+    date: 'June 12, 2024',
+  },
+  {
+    id: '6',
+    title: 'Understanding Server-Side Rendering in Next.js',
+    description: 'Explore how Next.js leverages server-side rendering (SSR) to improve SEO and performance in web applications.',
+    author: 'Lisa Green',
+    date: 'May 7, 2024',
+  },
+  {
+    id: '7',
+    title: 'State Management with Redux: Best Practices',
+    description: 'An in-depth guide to managing global state using Redux, with best practices for writing clean, maintainable code.',
+    author: 'David Johnson',
+    date: 'April 23, 2024',
+  },
+  {
+    id: '8',
+    title: 'Advanced CSS Techniques for Modern Web Design',
+    description: 'Upgrade your CSS skills with advanced techniques like animations, CSS grid, and responsive design strategies.',
+    author: 'Sophia Lee',
+    date: 'March 18, 2024',
+  },
+  {
+    id: '9',
+    title: 'JavaScript ES2024: What’s New?',
+    description: 'A look at the new features introduced in the ES2024 specification, including pattern matching and new array methods.',
+    author: 'Chris Wilson',
+    date: 'February 10, 2024',
+  },
+  {
+    id: '10',
+    title: 'Getting Started with GraphQL and Apollo',
+    description: 'Learn how to build efficient and flexible APIs using GraphQL and Apollo Client, focusing on querying and mutations.',
+    author: 'Rachel Adams',
+    date: 'January 15, 2024',
+  },
+  {
+    id: '11',
+    title: 'Securing Your Web Applications: A Guide for Developers',
+    description: 'Best practices and techniques to secure your web applications from common vulnerabilities like XSS, CSRF, and SQL injection.',
+    author: 'James Roberts',
+    date: 'December 5, 2023',
+  },
+  {
+    id: '12',
+    title: 'Introduction to Machine Learning with JavaScript',
+    description: 'A beginner-friendly introduction to implementing basic machine learning algorithms using JavaScript and TensorFlow.js.',
+    author: 'Maria Thomas',
+    date: 'November 20, 2023',
+  },
+];
