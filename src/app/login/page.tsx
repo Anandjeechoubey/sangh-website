@@ -24,7 +24,8 @@ const LoginPage = () => {
 
       if (response.ok) {
         const data = await response.json();
-        document.cookie = `auth-token=${data.token}; path=/;`;
+        document.cookie = `auth-token=${data.token}; path=/; email=${email};`;
+        document.cookie = `email=${email}; path=/;`;
 
         // Redirect to homepage after login
         router.push("/");

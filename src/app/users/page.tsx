@@ -20,7 +20,7 @@ const UsersPage = () => {
   return (
     <>
       <Header isAuthenticated={true} />
-      <div className="container py-24 px-12 md:px-24 lg:px-48">
+      <div className="py-24 px-12 md:px-24 lg:px-48">
         {/* Page Header */}
         {/* <h1 className="text-4xl font-bold text-center mb-8">All Users</h1> */}
         <p className="text-center mb-12 text-gray-600">

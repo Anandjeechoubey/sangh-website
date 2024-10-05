@@ -28,3 +28,12 @@ export interface User {
     return user;
   };
   
+
+  export async function fetchUserByEmail(email: string) {
+    const response = await fetch(`/api/user-by-email/${email}`);
+    if (response.ok) {
+      return await response.json();
+    } else {
+      throw new Error('Failed to fetch user details');
+    }
+  }

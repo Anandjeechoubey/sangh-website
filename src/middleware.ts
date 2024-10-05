@@ -1,31 +1,19 @@
 // middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import jwt from 'jsonwebtoken';
+import { isAuthenticated } from '@/lib/jwtTokenControl'
 
 const JWT_SECRET = process.env.JWT_SECRET || '';
 
 // Middleware function
-export function middleware(request: NextRequest) {
-  const token = request.cookies.get('auth-token')?.value;
-  console.log("token: ", token);
-
-  // Check if the token exists
-  if (!token) {
-    // If no token, redirect to the login page
-    return NextResponse.redirect(new URL('/login', request.url));
+export async function middleware(request: NextRequest) {
+  console.log('middleware', request);
+  const result = await isAuthenticated(request)
+  console.log('middleware-res', result);
+  if (!result) {
+    return NextResponse.redirect(new URL('/login', request.url))
   }
-
-  try {
-    // Verify the JWT token
-    jwt.verify(token, JWT_SECRET);
-    // If verification is successful, allow the request to continue
-    return NextResponse.next();
-  } catch (error) {
-    console.error('JWT verification failed:', error);
-    // If the token is invalid, redirect to the login page
-    return NextResponse.redirect(new URL('/login', request.url));
-  }
+  return NextResponse.next();
 }
 
 // Specify the routes to apply the middleware to
